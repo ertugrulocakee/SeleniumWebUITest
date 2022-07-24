@@ -50,3 +50,7 @@ Session ID: 343492d6ae5c101bb9fd498cd6ff68a2
 2022-07-24 09:10:54,331 INFO  [Log] selectBook() is Successfull! 
 2022-07-24 09:10:58,521 INFO  [Log] addBook() is Successfull! 
 2022-07-24 09:11:08,487 INFO  [Log] goToBasket() is Successfull! 
+2022-07-24 12:06:03,413 INFO  [Log] searchBook() is Successfull! 
+2022-07-24 12:06:04,554 INFO  [Log] selectBook() is Successfull! 
+2022-07-24 12:06:08,736 INFO  [Log] addBook() is Successfull! 
+2022-07-24 12:06:18,864 INFO  [Log] goToBasket() is Successfull! 
