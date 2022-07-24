@@ -49,19 +49,11 @@ public class BasketPageObjectModel extends BasePageObjectModel{
 
        String newValueString = String.valueOf(newValue);
 
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        shortStop();
 
         remove(addBookLocator);
 
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        shortStop();
 
         write(addBookLocator,newValueString);
 

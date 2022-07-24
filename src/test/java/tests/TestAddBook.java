@@ -52,12 +52,9 @@ public class TestAddBook extends BaseTest {
 
         Assertions.assertTrue(bookDetailPage.isOnBookDetailPage(), "Not on book detail page!");
 
-        try {
-            Thread.sleep(2000);
-            Assertions.assertTrue(homePage.isBookCountUp(), "Book count did not increase!");
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        bookDetailPage.averageStop();
+
+        Assertions.assertTrue(homePage.isBookCountUp(), "Book count did not increase!");
 
     }
 
@@ -70,34 +67,21 @@ public class TestAddBook extends BaseTest {
 
         homePage.openBasket();
 
-        try {
+        homePage.averageStop();
 
-            Thread.sleep(2000);
-            homePage.goToBasketPage();
-
-        }catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        homePage.goToBasketPage();
 
         Assertions.assertTrue(basketPage.checkIfBookAdded() , "Book was not added to basket!");
 
         basketPage.addBook();
 
-        try {
+        basketPage.longStop();
 
-            Thread.sleep(3000);
-            basketPage.removeBook();
+        basketPage.removeBook();
 
-        }catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        basketPage.averageStop();
 
-        try {
-            Thread.sleep(2000);
-            Assertions.assertTrue(basketPage.checkIfEmpty(), "There are two books in the basket!");
-        }catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        Assertions.assertTrue(basketPage.checkIfEmpty(), "There are two books in the basket!");
 
     }
 

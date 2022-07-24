@@ -19,15 +19,9 @@ public class BookDetailPageObjectModel extends BasePageObjectModel {
 
     public  void addToBasket(){
 
+       averageStop();
 
-        try {
-
-            Thread.sleep(2000);
-            select(addBookLocator);
-
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+       select(addBookLocator);
 
     }
 
